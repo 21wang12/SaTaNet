@@ -1,0 +1,39 @@
+DATASET:
+  CACHE_DIR: "/path/to/output/"
+  TEST_SET: "/path/to/test/data/"
+  IMAGE_EXT: ".bmp"
+  KEY_POINTS: 19
+  PIXEL_SIZE:
+    - 0.1
+    - 0.1
+  CACHED_IMAGE_SIZE:
+    - 640
+    - 800
+
+  AUGMENTATION:
+    ROTATION_FACTOR: 3
+    INTENSITY_FACTOR: 0.5
+    SF: 0.05
+    TRANSLATION_X: 10
+    TRANSLATION_Y: 10
+    ELASTIC_STRENGTH: 500
+    ELASTIC_SMOOTHNESS: 30
+    CROP: True
+
+TRAIN:
+  BATCH_SIZE: 4
+  LR: 0.001
+  EPOCHS: 100
+  MULTIHEAD: False
+
+MODEL:
+  ENCODER_NAME: 'resnext50_32x4d'  # timm-resnest50d_4s2x40d, resnext50_32x4d
+  ENCODER_WEIGHTS: 'imagenet'
+  DECODER_CHANNELS:
+    - 256
+    - 128
+    - 64
+    - 32
+    - 32
+  IN_CHANNELS: 1
+  SPATIAL_ATTENTION: False
