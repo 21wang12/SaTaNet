@@ -8,6 +8,7 @@ This code can be used to reproduce the experiments performed in our paper 'SaTaN
     <img src="https://github.com/21wang12/SaTaNet/assets/38482259/b8a273b9-2b85-4637-a650-29a60909cd59" width="600">
   </div>
 </div>
+
 ## Requirements
 
 - Python 3 (code has been tested on Python 3.7)
